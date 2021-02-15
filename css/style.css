@@ -1,0 +1,28 @@
+@charset "utf8";
+
+
+/*media query*/
+/*ref)*/
+/*https://www.seojuku.com/blog/responsive-mediaquery.html*/
+
+/*タブレット 横は	パソコンと同じ*/
+/*タブレット 縦のみ	*/
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    
+}
+/*タブレット 縦から	*/
+@media screen and (max-width: 1024px){
+    
+}
+/*スマホ 横のみ	*/
+@media screen and (max-width: 896px) and (orientation: landscape){
+    
+}
+/*スマホ 横から	*/ 
+@media screen and (max-width: 896px){
+    
+}
+/*スマホ　縦からは */
+@media screen and (max-width: 480px){
+    
+}
