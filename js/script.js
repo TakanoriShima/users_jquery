@@ -69,17 +69,22 @@ const add_user = () => {
 }
 const validate = (name, age) => {
 
-    if(name !== '' && age !== ''){
-        return true;
-    }else{
-        if(name === ''){
-            $('input[name="name"]').after($('<span>', {text: '名前を入力してください', style: 'margin-left: 5px'}));
-        }
-        if(age === ''){
-            $('input[name="age"]').after($('<span>', {text: '年齢を入力してください', style: 'margin-left: 5px'}));
-        }
-        return false;
+    let flag = true;
+
+    if(name === ''){
+        $('input[name="name"]').after($('<span>', {text: '名前を入力してください', style: 'margin-left: 5px'}));
+        flag = false;
     }
+    
+    if(age === ''){
+        $('input[name="age"]').after($('<span>', {text: '年齢を入力してください', style: 'margin-left: 5px'}));
+        flag = false;
+    }else if(!age.match(/^[0-9]+$/)){
+        $('input[name="age"]').after($('<span>', {text: '0以上の整数を入力してください', style: 'margin-left: 5px'}));
+        flag = false;
+    }
+
+    return flag;
 }
 
 const select_user = () => {
