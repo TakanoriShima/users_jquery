@@ -13,6 +13,7 @@
     border: solid 2px blue;
     border-radius: 30px;
     margin-bottom: 15px;
+    background-color: white;
 }
 #new {
     width: 60%;
@@ -21,6 +22,7 @@
     margin-bottom: 16px;
     padding: 17px;
     height: 219px;
+    background-color: white;
 }
 #choose {
     width: 60%;
