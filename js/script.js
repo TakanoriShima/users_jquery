@@ -46,14 +46,14 @@ const disp_all_users = (users) => {
        tr.append($('<td>', {text: index + 1}));
        tr.append($('<td>', {text: user.name}));
        tr.append($('<td>', {text: user.age + '歳'}));
-       tr.append($('<td>', {text: user.gender === 'male' ? '男性' : '女性'}));
+       tr.append($('<td>', {text: user.gender === 'male' ? '男性' : '女性', style: user.gender === 'male' ? 'background-color: #0000ff38' : 'background-color: #ff00003b'}));
        tr.append($('<td>', {text: user.drink()}));
        $('#disp').append(tr);
     });
 }
 
 const add_user = () => {
-    $('h1 + p').remove();
+    reset_messages
     const name = $('input[name="name"]').val();
     $('input[name="name"]').val("");
     const age = $('input[name="age"]').val();
@@ -68,7 +68,7 @@ const add_user = () => {
  
 }
 const validate = (name, age) => {
-    $('span').remove();
+
     if(name !== '' && age !== ''){
         return true;
     }else{
@@ -83,7 +83,7 @@ const validate = (name, age) => {
 }
 
 const select_user = () => {
-    $('h1 + p').remove();
+    reset_messages();
     let select_gender = $('input[name="select_gender"]:checked').val();
     let select_users = now_all_users.filter((user) => {
         if(select_gender === 'all'){
@@ -93,6 +93,11 @@ const select_user = () => {
         }
     });
     disp_all_users(select_users);
+}
+
+const reset_messages = () => {
+    $('span').remove();
+    $('h1 + p').remove();
 }
 
 

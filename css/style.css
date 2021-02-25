@@ -36,6 +36,7 @@ tr {
     height: 50px;
 }
 th{
+    font-size: 1.5em;
     color: red;
     background-color: pink;
 }
