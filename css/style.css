@@ -1,4 +1,50 @@
 @charset "utf8";
+#wrapper {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #eee;
+    margin-top: 20px;
+    padding: 24px;
+}
+.title {
+    text-align: center;
+    color: blue;
+    padding: 5px;
+    border: solid 2px blue;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+#new {
+    width: 60%;
+    margin: 0 auto;
+    border: solid 1px;
+    margin-bottom: 16px;
+    padding: 17px;
+    height: 219px;
+}
+#choose {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.table_border {
+    border: solid 1px;
+    width: 100%;
+    background-color: white;
+}
+tr {
+    height: 50px;
+}
+th{
+    color: red;
+    background-color: pink;
+}
+th, td {
+    width: 20%;
+    text-align: center;
+    border: solid 1px;
+}
+
 
 
 /*media query*/

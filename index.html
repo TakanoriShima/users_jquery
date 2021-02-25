@@ -19,6 +19,18 @@
         <script src="js/script.js"></script>
     </head>
     <body>
-        <h1>見出し</h1>
+        <div id="wrapper">
+            <h1>見出し</h1>
+            <div id="new">
+                <p><label>名前: <input type="text" name="name"></label></p>
+                <p><label>年齢: <input type="age" name="age"></label></p>
+                <p>性別: <label>男性 <input type="radio" name="gender" value="male" checked></label> <label>女性 <input type="radio" name="gender" value="female"></label></p>
+                <p><button>登録</button></p>
+            </div>
+            <div id="choose">
+                <p><label>全員 <input type="radio" name="select_gender" value="all" checked></label>　<label>男性 <input type="radio" name="select_gender" value="male"></label>　<label>女性 <input type="radio" name="select_gender" value="female"></label></p>
+            </div>
+            <table id="disp"></table>
+        </div>
     </body>
 </html>
