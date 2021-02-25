@@ -53,7 +53,7 @@ const disp_all_users = (users) => {
 }
 
 const add_user = () => {
-    reset_messages
+    reset_messages();
     const name = $('input[name="name"]').val();
     $('input[name="name"]').val("");
     const age = $('input[name="age"]').val();
